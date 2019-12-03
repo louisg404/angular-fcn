@@ -1,0 +1,18 @@
+body{
+    background-color: #F8F9FD !important;
+}
+nav{
+    background-color: white;
+    height: 80px;
+}
+nav a{
+    color: black !important;
+    height: 80px;
+}
+nav li a{
+    padding-top: 5px !important;
+}
+nav img{
+    width: 120px;
+    padding-left: 30px;
+}
