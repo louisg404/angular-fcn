@@ -1,3 +1,10 @@
+<div class="container" *ngIf="auth.loggedIn === false">
+    <div class="row">
+        <div class="col s12 m6 l6">
+            <a style="border-radius: 5px; background-color: #00A558;" (click)="auth.login()" class="btn">Se connecter</a>
+        </div>
+    </div>
+</div>
 <div class="container" *ngIf="auth.userProfile$ | async as profile">
     <div class="row">
         <div class="col s12">

@@ -13,7 +13,7 @@ export class ClassementComponent implements OnInit {
   constructor(private apiService: ApiService) { }
 
   ngOnInit() {
-    this.apiService.getData().subscribe((data)=>{
+    this.apiService.getClassement().subscribe((data)=>{
       console.log(data);
       this.classements = data;
     });

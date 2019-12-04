@@ -11,7 +11,7 @@ export class ApiService {
 
   constructor(private httpClient: HttpClient, private datePipe: DatePipe) { }
 
-  public getData(){
+  public getClassement(){
     return this.httpClient.get(`https://apiv2.apifootball.com/?action=get_standings&league_id=176&APIkey=${this.API_KEY}`);
   }
 
