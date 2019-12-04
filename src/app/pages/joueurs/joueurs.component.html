@@ -1,0 +1,17 @@
+<div class="row" *ngFor="let joueur of joueurs; let i= index;">
+    <h3>Entraineur : {{joueur.coaches[0].coach_name}}</h3>
+    <div id="contain-player" class="z-depth-1 col s12 m5 l5" *ngFor="let jou of joueur.players">
+        <h5>{{jou.player_number}}. {{jou.player_name}}</h5>
+        <h6>
+            <img *ngIf="jou.player_country != 'DR Congo' " width="13" src="https://cdn.countryflags.com/thumbs/{{jou.player_country | lowercase}}/flag-round-250.png">
+            <img *ngIf="jou.player_country === 'DR Congo' " width="13" src="https://cdn.countryflags.com/thumbs/congo-republic-of-the/flag-round-250.png">
+            <span *ngIf="jou.player_type === 'Defenders' "> Défenseur</span>
+            <span *ngIf="jou.player_type === 'Goalkeepers' "> Gardien</span>
+            <span *ngIf="jou.player_type === 'Midfielders' "> Milieu</span>
+            <span *ngIf="jou.player_type === 'Forwards' "> Attaquant</span>
+        </h6>
+        <p>{{jou.player_match_played}} match(s) | {{jou.player_goals}} but(s)</p>
+        <img width="40" src="../../../assets/red.png"><span>{{jou.player_red_cards}}</span>
+        <img width="40" src="../../../assets/yellow.png"><span>{{jou.player_yellow_cards}}</span>
+    </div>
+</div>

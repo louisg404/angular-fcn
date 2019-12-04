@@ -13,7 +13,7 @@ export class MatchsComponent implements OnInit {
   constructor(private apiService: ApiService) { }
 
   ngOnInit() {
-    this.apiService.getData().subscribe((data)=>{
+    this.apiService.getMatchs().subscribe((data)=>{
       console.log(data);
       this.matchs = data;
     });

@@ -1,7 +1,16 @@
-.userImg {
-  border-radius: 100px;
-  display: block;
-  height: 100px;
-  margin: 0 auto;
-  width: 100px;
+.profile-pic{
+  margin-top: 10px;
+}
+#contain{
+  background-color: white;
+  padding: 15px;
+  border-radius: 5px;
+}
+.span-yellow p{
+  background-color: #00A558;
+  color: white;
+  border-radius: 5px;
+  padding: 3px 10px;
+  font-size: 12px;
+  display: table;
 }

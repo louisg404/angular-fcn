@@ -12,6 +12,10 @@ import { ProfileComponent } from './pages/profile/profile.component';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { HttpClientModule } from '@angular/common/http';
 import { MatchsComponent } from './pages/matchs/matchs.component';
+import { JoueursComponent } from './pages/joueurs/joueurs.component';
+import { ClassementComponent } from './pages/classement/classement.component';
+
+import { DatePipe } from '@angular/common';
 
 export function hljsLanguages() {
   return [{ name: 'json', func: json }];
@@ -23,7 +27,9 @@ export function hljsLanguages() {
     HomeComponent,
     ProfileComponent,
     NavBarComponent,
-    MatchsComponent
+    MatchsComponent,
+    JoueursComponent,
+    ClassementComponent
   ],
   imports: [
     BrowserModule,
@@ -35,7 +41,7 @@ export function hljsLanguages() {
     FontAwesomeModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [DatePipe],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

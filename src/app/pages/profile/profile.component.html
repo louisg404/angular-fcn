@@ -1,20 +1,19 @@
-<div class="container mt-5" *ngIf="auth.userProfile$ | async as profile">
-  <div
-    class="row align-items-center profile-header mb-5 text-center text-md-left"
-  >
-    <div class="col-md-2">
-      <img
-        [src]="profile.picture"
-        class="rounded-circle img-fluid profile-picture mb-3 mb-md-0"
-      />
+<div *ngIf="auth.userProfile$ | async as profile">
+    <h3>{{ profile.name }}</h3>
+  <div id="contain" class="row z-depth-1">
+    <div class="col s12 m2 l2">
+        <img [src]="profile.picture" class="circle responsive-img profile-pic"/>
     </div>
-    <div class="col-md">
-      <h2>{{ profile.name }}</h2>
-      <p class="lead text-muted">{{ profile.email }}</p>
+    <div class="col s12 m3 l3">
+        <p>Adresse mail</p>
+        <p>Compte vérifié</p>
+        <p>Pseudo</p>
     </div>
-  </div>
-
-  <div class="row" *ngIf="profileJson">
-    <pre class="rounded"><code class="json" [highlight]="profileJson"></code></pre>
+    <div class="col s12 m7 l7 span-yellow">
+        <p>{{ profile.email }}</p>
+        <p *ngIf="profile.email_verified === true">Oui</p>
+        <p *ngIf="profile.email_verified === false">Non</p>
+        <p>{{ profile.nickname }}</p>
+    </div>
   </div>
 </div>

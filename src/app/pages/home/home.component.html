@@ -1,0 +1,38 @@
+<div class="container" *ngIf="auth.userProfile$ | async as profile">
+    <div class="row">
+        <div class="col s12">
+            <h3>Bonjour {{ profile.name }}</h3>
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col s12 m6 l6">
+            <div class="card">
+                <div class="card-content white-text">
+                    <a routerLink="/matchs">
+                        <span class="card-title">Résultats</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="col s12 m6 l6">
+            <div class="card">
+                <div class="card-content white-text">
+                    <a routerLink="/joueurs">
+                        <span class="card-title">Joueurs</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="col s12 m12 l12">
+            <div class="card">
+                <div class="card-content white-text">
+                    <a routerLink="/classement">
+                        <span class="card-title">Classement Ligue 1</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+      

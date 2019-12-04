@@ -119,7 +119,7 @@ export class AuthService {
       // Call method to log out
       client.logout({
         client_id: config.clientId,
-        returnTo: window.location.origin
+        returnTo: 'http://localhost:3000'
       });
     });
   }

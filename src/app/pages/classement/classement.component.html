@@ -1,0 +1,33 @@
+<h3>Classement Ligue 1</h3>
+<div id="contain-classement" class="row z-depth-1">
+    <table>
+    <thead>
+        <tr>
+            <th></th>
+            <th>Equipe</th>
+            <th>J</th>
+            <th>G</th>
+            <th>N</th>
+            <th>P</th>
+            <th>BP</th>
+            <th>BC</th>
+            <th>Pts</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr *ngFor="let classement of classements">
+            <td>{{classement.overall_league_position}}</td>
+            <td *ngIf="classement.team_name !== 'Nantes' ">{{classement.team_name}}</td>
+            <td id="nantes-line" *ngIf="classement.team_name === 'Nantes' ">{{classement.team_name}}</td>
+            <td>{{classement.overall_league_payed}}</td>
+            <td>{{classement.overall_league_W}}</td>
+            <td>{{classement.overall_league_D}}</td>
+            <td>{{classement.overall_league_L}}</td>
+            <td>{{classement.overall_league_GF}}</td>
+            <td>{{classement.overall_league_GA}}</td>
+            <td>{{classement.overall_league_PTS}}</td>
+        </tr>
+    </tbody>
+    </table>
+</div>

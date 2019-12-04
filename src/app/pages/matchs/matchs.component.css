@@ -1,0 +1,25 @@
+#contain-matchs{
+    background-color: white;
+    padding: 5px 20px;
+    border-radius: 5px;
+    margin-bottom: 25px;
+    margin-right: 25px;
+}
+#score{
+    font-size: 30px;
+}
+#equipe{
+    font-size: 22px;
+}
+.goals p{
+    margin-top: 0px;
+}
+.victoire, .nul, .defaite{
+    padding: 5px 15px;
+    border-radius: 5px;
+    color: white;
+    display: table;
+}
+.victoire{ background-color: #00A558; }
+.nul{ background-color: grey; }
+.defaite{ background-color: red; }

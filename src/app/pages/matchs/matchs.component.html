@@ -1,3 +1,38 @@
-<div *ngFor="let match of matchs">
-    <h2>{{match.country_name}}</h2>
+<div class="row">
+    <h3>Derniers matchs</h3>
+    <div id="contain-matchs" class="z-depth-1 col s12" *ngFor="let match of matchs">
+
+        <div *ngIf="match.match_hometeam_name === 'Nantes' ">
+            <h6 class="victoire" *ngIf="match.match_hometeam_score > match.match_awayteam_score">Victoire</h6>
+            <h6 class="nul" *ngIf="match.match_hometeam_score === match.match_awayteam_score">Match nul</h6>
+            <h6 class="defaite" *ngIf="match.match_hometeam_score < match.match_awayteam_score">Défaite</h6>
+        </div>
+        <div *ngIf="match.match_awayteam_name === 'Nantes' ">
+            <h6 class="victoire" *ngIf="match.match_awayteam_score > match.match_hometeam_score">Victoire</h6>
+            <h6 class="nul" *ngIf="match.match_awayteam_score === match.match_hometeam_score">Match nul</h6>
+            <h6 class="defaite" *ngIf="match.match_awayteam_score < match.match_hometeam_score">Défaite</h6>
+        </div>
+
+        <h6>{{match.league_name}} | {{match.match_date | date:'d MMM yyyy'}} | {{match.match_time}}</h6>
+        <div style="text-align: right;" class="col s12 m5 l5">
+            <p><span id="equipe">{{match.match_hometeam_name}}</span></p>
+        </div>
+        <div style="text-align: center; margin-top: -20px;" class="col s12 m2 l2">
+            <p style="background-color: #00a558; color: white; padding: 15px 0; border-radius: 5px;"><span id="score">{{match.match_hometeam_score}} - {{match.match_awayteam_score}}</span></p>
+        </div>
+        <div class="col s12 m5 l5">
+            <p><span id="equipe">{{match.match_awayteam_name}}</span></p>
+        </div>
+        <div class="col s12 goals" *ngFor="let mat of match.goalscorer">
+            <div style="text-align: right;" class="col s12 m5 l5">
+                <p>{{mat.home_scorer}}</p>
+            </div>
+            <div style="text-align: center;" class="col s12 m2 l2">
+                <p>{{mat.time}}'</p>
+            </div>
+            <div class="col s12 m5 l5">
+                <p>{{mat.away_scorer}}</p>
+            </div>
+        </div>
+    </div>
 </div>
