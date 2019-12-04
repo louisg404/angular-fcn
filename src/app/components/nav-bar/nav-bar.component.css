@@ -1,3 +1,9 @@
 .active-link{
+    color: #00a558 !important;
+}
+nav{
     background-color: #FFDC00;
+}
+nav ul a:hover {
+    background-color: rgba(0, 0, 0, 0) !important;
 }
