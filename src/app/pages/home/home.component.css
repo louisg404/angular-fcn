@@ -1,15 +1,14 @@
 .card{
     background-color: #00a558;
-    height: 200px !important;
+    height: 300px !important;
 }
 .card-title{
     color: black !important;
     background-color: white;
     padding: 3px 10px;
     border-radius: 5px;
-    margin-top: -15px;
-    margin-left: -15px;
-    font-size: 18px;
+    margin-top: -10px;
+    margin-left: -10px;
 }
 .card-content{
     display: table;

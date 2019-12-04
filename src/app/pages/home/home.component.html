@@ -5,7 +5,7 @@
         </div>
     </div>
 </div>
-<div class="container" *ngIf="auth.userProfile$ | async as profile">
+<div *ngIf="auth.userProfile$ | async as profile">
     <div class="row">
         <div class="col s12">
             <h3>Bonjour {{ profile.name }}</h3>
@@ -14,32 +14,32 @@
     
     <div class="row">
         <div class="col s12 m6 l6">
-            <div style="background-image: url('https://media.giphy.com/media/ULjJTVl00dVMA/source.gif') !important;" class="card">
-                <div class="card-content white-text">
-                    <a routerLink="/matchs">
+            <a routerLink="/matchs">
+                <div style="background-image: url('https://media.giphy.com/media/ULjJTVl00dVMA/source.gif') !important; background: no-repeat; background-size: cover;" class="card">
+                    <div class="card-content white-text">
                         <span class="card-title">Résultats</span>
-                    </a>
+                    </div>
                 </div>
-            </div>
+            </a>
         </div>
         
         <div class="col s12 m6 l6">
-                <div style="background-image: url('https://media.giphy.com/media/cL4uA9oj9r6XEB9IEI/giphy-downsized-large.gif') !important; background-size: cover; background-position: top;" class="card">
-                <div class="card-content white-text">
-                    <a routerLink="/joueurs">
+            <a routerLink="/joueurs">
+                <div style="background-image: url('https://media.giphy.com/media/cL4uA9oj9r6XEB9IEI/giphy-downsized-large.gif') !important; background: no-repeat; background-size: cover; background-position: top;" class="card">
+                    <div class="card-content white-text">
                         <span class="card-title">Joueurs</span>
-                    </a>
+                    </div>
                 </div>
-            </div>
+            </a>
         </div>
         <div class="col s12 m12 l12">
-            <div style="background-image: url('https://media.giphy.com/media/JpwXWwZELAgYQ1TAoa/giphy.gif') !important; background: no-repeat; background-size: cover; background-position: bottom;" class="card">
-                <div class="card-content white-text">
-                    <a routerLink="/classement">
+            <a routerLink="/classement">
+                <div style="background-image: url('https://media.giphy.com/media/JpwXWwZELAgYQ1TAoa/giphy.gif') !important; background: no-repeat; background-size: cover; background-position: bottom;" class="card">
+                    <div class="card-content white-text">
                         <span class="card-title">Classement Ligue 1</span>
-                    </a>
+                    </div>
                 </div>
-            </div>
+            </a>
         </div>
     </div>
 </div>
