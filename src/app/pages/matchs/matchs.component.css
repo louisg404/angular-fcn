@@ -14,7 +14,7 @@
 .goals p{
     margin-top: 0px;
 }
-.victoire, .nul, .defaite{
+.victoire, .nul, .defaite, .venir{
     padding: 5px 15px;
     border-radius: 5px;
     color: white;
@@ -23,3 +23,4 @@
 .victoire{ background-color: #00A558; }
 .nul{ background-color: grey; }
 .defaite{ background-color: red; }
+.venir{ background-color: black; }

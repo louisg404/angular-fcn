@@ -1,16 +1,21 @@
 <div class="row">
     <h3>Derniers matchs</h3>
-    <div id="contain-matchs" class="z-depth-1 col s12" *ngFor="let match of matchs">
+    <div id="contain-matchs" class="z-depth-1 col s12" *ngFor="let match of matchs.slice().reverse()">
 
-        <div *ngIf="match.match_hometeam_name === 'Nantes' ">
-            <h6 class="victoire" *ngIf="match.match_hometeam_score > match.match_awayteam_score">Victoire</h6>
-            <h6 class="nul" *ngIf="match.match_hometeam_score === match.match_awayteam_score">Match nul</h6>
-            <h6 class="defaite" *ngIf="match.match_hometeam_score < match.match_awayteam_score">Défaite</h6>
+        <div *ngIf="match.match_awayteam_score">
+            <div *ngIf="match.match_hometeam_name === 'Nantes' ">
+                <h6 class="victoire" *ngIf="match.match_hometeam_score > match.match_awayteam_score">Victoire</h6>
+                <h6 class="nul" *ngIf="match.match_hometeam_score === match.match_awayteam_score">Match nul</h6>
+                <h6 class="defaite" *ngIf="match.match_hometeam_score < match.match_awayteam_score">Défaite</h6>
+            </div>
+            <div *ngIf="match.match_awayteam_name === 'Nantes' ">
+                <h6 class="victoire" *ngIf="match.match_awayteam_score > match.match_hometeam_score">Victoire</h6>
+                <h6 class="nul" *ngIf="match.match_awayteam_score === match.match_hometeam_score">Match nul</h6>
+                <h6 class="defaite" *ngIf="match.match_awayteam_score < match.match_hometeam_score">Défaite</h6>
+            </div>
         </div>
-        <div *ngIf="match.match_awayteam_name === 'Nantes' ">
-            <h6 class="victoire" *ngIf="match.match_awayteam_score > match.match_hometeam_score">Victoire</h6>
-            <h6 class="nul" *ngIf="match.match_awayteam_score === match.match_hometeam_score">Match nul</h6>
-            <h6 class="defaite" *ngIf="match.match_awayteam_score < match.match_hometeam_score">Défaite</h6>
+        <div *ngIf="!match.match_awayteam_score">
+            <h6 class="venir">A venir</h6>
         </div>
 
         <h6>{{match.league_name}} | {{match.match_date | date:'d MMM yyyy'}} | {{match.match_time}}</h6>
