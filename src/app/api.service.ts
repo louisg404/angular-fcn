@@ -7,7 +7,7 @@ import { DatePipe } from '@angular/common';
 })
 export class ApiService {
 
-  API_KEY = '52fef902611d5c92e653e3e913b73065b4f7d74ef949fbedb3ad7b1990a6f493';
+  API_KEY = 'a7d01afe9d72aa8de1c07c474aa7e1313c6a00d9a7d9f46c70a0c036c1eedc72';
 
   constructor(private httpClient: HttpClient, private datePipe: DatePipe) { }
 
